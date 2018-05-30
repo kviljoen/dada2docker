@@ -8,3 +8,6 @@ MAINTAINER Paul McMurdie "paul.mcmurdie@wholebiome.com"
 RUN R -e 'source("https://bioconductor.org/biocLite.R"); biocLite("dada2")'
 
 CMD ["R"]
+
+################## Hex specific ###########################
+RUN mkdir -p /researchdata/fhgfs
