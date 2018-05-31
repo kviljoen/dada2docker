@@ -5,7 +5,8 @@ LABEL version="release"
 
 MAINTAINER Paul McMurdie "paul.mcmurdie@wholebiome.com"
 
-RUN R -e 'source("https://bioconductor.org/biocLite.R"); biocLite("dada2")'
+RUN R -e 'source("https://bioconductor.org/biocLite.R"); biocLite("dada2"); biocLite("DECIPHER"); biocLite("biomformat")'
+RUN R -e 'install.packages(c("phangorn","dplyr"), dependencies=TRUE)'
 
 CMD ["R"]
 
